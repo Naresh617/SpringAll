@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context/
+  http://www.springframework.org/schema/context/spring-context.xsd">
+  
+  <bean id="lister" class="com.naresh.code.MovieLister" autowire="byName">
+  <property name="year" value="2018"></property>
+  </bean>
+  <bean id="finder" class="com.naresh.code.MovieFinder" primary="true"></bean>
+  <bean id="finder1" class="com.naresh.code.MovieFinder"></bean>
+  </beans>
