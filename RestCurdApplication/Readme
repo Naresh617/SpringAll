@@ -1,0 +1,6 @@
+Extract Project to your workspace  and application automatically building.
+Explore the project opne com.naresh package click RestCurdApplication.java run as java application.
+I provide the basic authentication to my rest api UserName:naresh Password:6170
+open postman tool you provide user authentications  and you can insert date and get data all and id.
+I provide similar to postman tool that one is Swagger UI tool . After run application type below 
+http://localhost:2018/swagger-ui.html#/
