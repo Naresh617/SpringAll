@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,6 +22,7 @@ import com.naresh.repo.EmployeeRepository;
 @RequestMapping("/employee")
 public class EmployeeRestController 
 {
+	public static final String EMP="Employee";
 	@Autowired
 	private EmployeeRepository repo;
 	
@@ -50,7 +50,7 @@ public class EmployeeRestController
 		Optional<Employee> emp=repo.findById(empId);
 		if(emp==null)
 		{
-			response="Employee("+empId+")Not found";
+			response=EMP+empId+"Not Found";
 		}
 		else {
 			response=emp;
@@ -65,37 +65,16 @@ public class EmployeeRestController
 		Optional<Employee> emp=repo.findById(empId);
 		if(emp==null)
 		{
-			response="Employee("+empId+")Not found";
+			response=EMP+empId+"Not Found";
 		}
-		else {
+		else 
+		{
 			repo.deleteById(empId);
-			response="Employee("+empId+")Deleted";
+			response=EMP+empId+"Deleted";
 		}
 		return ResponseEntity.ok(response);
 			
 	}
-	/*@PutMapping("/update/{empId}")
-	public ResponseEntity<Object> updateEmployee(@PathVariable Long empId,@Valid @RequestBody Employee employee, Errors errors)
-	{
-		Object response=null;
-		if(errors.hasErrors())
-		{
-			response=errors.getAllErrors();
-			return ResponseEntity.badRequest().body(response);
-		}
-		Employee emp=repo.find
-		if(emp==null)
-		{
-			response="Employee("+empId+")Not found";
-		}
-		else
-		{
-			emp.setEmpName(employee.getEmpName());
-		}
-			
-		return null;
-	}
-	*/
     @GetMapping("/all")
 	public ResponseEntity<Object> getAllEmployee(){
 		Object response=null;

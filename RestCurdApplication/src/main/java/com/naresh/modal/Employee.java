@@ -42,10 +42,6 @@ public class Employee
 	@Column(name="eudate")
 	@LastModifiedDate
 	private Date updatedDate;
-	public Employee()
-	{
-		
-	}
 	
 	public Long getEmpId() {
 		return empId;
