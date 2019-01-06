@@ -7,7 +7,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-<link href="D:\\SpringBootApplications\\SpringCustomValidation\\src\\main\\resources\\static\\css\\main.css" rel="stylesheet"></link>
+<style type="text/css">
+.error {
+	color: blue;
+}
+</style>
 
 <title>Spring Custom validations</title>
 </head>
@@ -24,6 +28,11 @@
 				<td>Text:</td>
 				<td><form:input path="text" /></td>
 				<td><form:errors path="text" cssClass="error" /></td>
+			</tr>
+			<tr>
+				<td>PhoneNumber:</td>
+				<td><form:input path="phoneNumber" /></td>
+				<td><form:errors path="phoneNumber" cssClass="error" /></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="submit" value="Submit"></td>

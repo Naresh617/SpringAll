@@ -2,6 +2,7 @@ package com.naresh.modal;
 
 import javax.validation.constraints.Size;
 
+import com.naresh.validation.ContactNumberConstraint;
 import com.naresh.validation.ValidEmail;
 
 public class RequestInfo {
@@ -11,7 +12,18 @@ public class RequestInfo {
  
 	@Size(min = 5, max = 255, message = "Please enter between {min} and {max} characters.")
 	private String text;
+	
+	@ContactNumberConstraint
+	private String phoneNumber;
  
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -27,9 +39,11 @@ public class RequestInfo {
 	public void setText(String text) {
 		this.text = text;
 	}
- 
+
 	@Override
 	public String toString() {
-		return "RequestInfo [email=" + email + ", text=" + text + "]";
+		return "RequestInfo [email=" + email + ", text=" + text + ", phoneNumber=" + phoneNumber + "]";
 	}
+ 
+	
 }
