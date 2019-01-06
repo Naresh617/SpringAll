@@ -1,4 +1,4 @@
-package com.naresh.rest.main;
+package com.naresh.mvc;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class HelloWorldApplicationTests {
+public class SpringDispatcherServletApplicationTests {
 
 	@Test
 	public void contextLoads() {

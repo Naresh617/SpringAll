@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>SpringBootApplication using DispatcherServlet</title>
 </head>
 <body>
-<h1>Hello Spring</h1>
+<h1>Hello Spring MVC Application Say Hello......................</h1>
 </body>
 </html>
